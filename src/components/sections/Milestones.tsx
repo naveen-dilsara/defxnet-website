@@ -38,7 +38,7 @@ export function Milestones() {
       title: 'Final Report',
       description: 'Comprehensive final report covering all aspects of the DefXnet project from conception to completion.',
       date: 'May 2025',
-      status: 'inprogress'
+      status: 'completed'
     },
     {
       title: 'Log Book',

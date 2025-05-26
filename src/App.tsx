@@ -6,7 +6,6 @@ import { ResearchProblem } from './components/sections/ResearchProblem';
 import { Objectives } from './components/sections/Objectives';
 import { Methodology } from './components/sections/Methodology';
 import { Technologies } from './components/sections/Technologies';
-import { ProjectTimeline } from './components/sections/ProjectTimeline';
 import { Milestones } from './components/sections/Milestones';
 import { Documents } from './components/sections/Documents';
 import { Slides } from './components/sections/Slides';
@@ -25,7 +24,6 @@ export function App() {
         'objectives',
         'methodology',
         'technologies',
-        'timeline',
         'milestones',
         'documents',
         'slides',
@@ -72,9 +70,6 @@ export function App() {
         </div>
         <div className="bg-gradient-section section-transition">
           <Technologies />
-        </div>
-        <div className="bg-gradient-section section-transition">
-          <ProjectTimeline />
         </div>
         <div className="bg-gradient-section section-transition">
           <Milestones />
