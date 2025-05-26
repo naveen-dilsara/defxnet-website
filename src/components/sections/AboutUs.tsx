@@ -42,8 +42,8 @@ export function AboutUs() {
       image: "/images/n_premakanthan.jpg",
       description: "it21197550@my.sliit.lk",
       links: {
-        github: "https://github.com/Premakanthan-N",
-        linkedin: "https://www.linkedin.com/in/premakanthan-n-b0b5b0227/",
+        github: "https://github.com/Nihila-Premakanthan",
+        linkedin: "http://www.linkedin.com/in/nihila-premakanthan-686678215",
         email: "it21197550@my.sliit.lk"
       }
     },
@@ -53,8 +53,8 @@ export function AboutUs() {
       image: "/images/dsc_wijesuriya.jpg",
       description: "it21155802@my.sliit.lk",
       links: {
-        github: "https://github.com/Chamath428",
-        linkedin: "https://www.linkedin.com/in/chamath-wijesuriya-b3b1b0227/",
+        github: "https://github.com/stephan-rz ",
+        linkedin: "https://www.linkedin.com/in/stephanrz/",
         email: "it21155802@my.sliit.lk"
       }
     },
@@ -64,7 +64,7 @@ export function AboutUs() {
       image: "/images/pgej_sandamal.jpg",
       description: "it21166860@my.sliit.lk",
       links: {
-        github: "https://github.com/JanithSandamal",
+        github: "https://github.com/Janith-Sandamal",
         linkedin: "https://www.linkedin.com/in/janith-sandamal-b3b1b0227/",
         email: "it21166860@my.sliit.lk"
       }
@@ -75,8 +75,8 @@ export function AboutUs() {
       image: "/images/wn_dilsara.jpg",
       description: "it21182600@my.sliit.lk",
       links: {
-        github: "https://github.com/Nuwanga-Wijamuni",
-        linkedin: "https://www.linkedin.com/in/nuwanga-wijamuni-b3b1b0227/",
+        github: "https://github.com/naveen-dilsara",
+        linkedin: "https://www.linkedin.com/in/naveendilsara/",
         email: "it21182600@my.sliit.lk"
       }
     }

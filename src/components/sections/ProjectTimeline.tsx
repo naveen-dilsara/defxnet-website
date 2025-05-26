@@ -6,7 +6,7 @@ import {
   GitBranch,
   FileCheck,
   Brain,
-  Flask,
+  Beaker,
   Shield,
   FileBarChart
 } from 'lucide-react';
@@ -47,7 +47,7 @@ export function ProjectTimeline() {
       title: 'Attack Implementation',
       status: 'in-progress',
       description: 'Development and testing of various adversarial attack methods.',
-      icon: <Flask className="w-6 h-6" />
+      icon: <Beaker className="w-6 h-6" />
     },
     {
       date: 'May 2024',
