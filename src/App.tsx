@@ -44,8 +44,8 @@ export function App() {
       <footer className="bg-blue-900 text-white py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm">
-            © 2024 CNN Robustness Research Team. All rights reserved. |
-            University of Colombo School of Computing
+            © 2025 DefXNet Solutions Team. All rights reserved. |
+            SLIIT
           </p>
         </div>
       </footer>

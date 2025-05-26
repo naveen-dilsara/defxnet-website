@@ -39,8 +39,8 @@ export function AboutUs() {
     photo: '/images/wn_dilsara.jpg',
     achievements: ['Novel Mask-Based Adversarial Strategy', 'Transfer Learning Applications', 'Medical Dataset Analysis'],
     social: {
-      github: 'wndilsara',
-      linkedin: 'wn-dilsara'
+      github: 'naveen-dilsara',
+      linkedin: 'naveendilsara'
     }
   }];
   return <section id="about" className="w-full py-20 bg-white">
