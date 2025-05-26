@@ -169,52 +169,6 @@ export function Methodology() {
           ))}
         </div>
 
-        {/* ResNet Performance Analysis */}
-        <div className="mt-16 mb-20">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">ResNet Performance Analysis</h3>
-          <div className="backdrop-blur-lg bg-white/40 border border-white/60 rounded-2xl p-8
-                         shadow-[0_8px_16px_rgba(148,163,184,0.1)]
-                         group cursor-pointer overflow-hidden">
-            <img
-              src="/images/resnet-performance.png"
-              alt="ResNet Performance Analysis"
-              className="w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-        </div>
-
-        {/* Process Flow with numbered steps */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Process Flow</h3>
-          <div className="grid grid-cols-1 gap-4 mb-8">
-            {[
-              { text: 'Dataset selection and preprocessing', icon: <Database className="w-5 h-5" /> },
-              { text: 'Implementing attacks', icon: <Workflow className="w-5 h-5" /> },
-              { text: 'Fine-tuning CNN model', icon: <Cpu className="w-5 h-5" /> },
-              { text: 'Applying defenses', icon: <ShieldCheck className="w-5 h-5" /> },
-              { text: 'Evaluating results with metrics', icon: <FileBarChart className="w-5 h-5" /> },
-            ].map((step, index) => (
-              <div
-                key={index}
-                className="backdrop-blur-lg bg-white/40 border border-white/60 rounded-xl
-                           shadow-[0_8px_16px_rgba(148,163,184,0.1)]
-                           hover:shadow-[0_8px_24px_rgba(148,163,184,0.2)]
-                           hover:bg-white/50
-                           transition-all duration-300
-                           flex items-center p-4"
-              >
-                <div className="w-8 h-8 bg-blue-900 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  {index + 1}
-                </div>
-                <div className="flex items-center gap-3">
-                  {step.icon}
-                  <p className="text-gray-800 font-medium">{step.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* System Architecture Diagram */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">System Architecture</h3>
