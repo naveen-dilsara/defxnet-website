@@ -1,17 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Home } from './components/sections/Home';
-import { Domain } from './components/sections/Domain';
+import { ProjectScope } from './components/sections/ProjectScope';
+import { ResearchProblem } from './components/sections/ResearchProblem';
+import { Objectives } from './components/sections/Objectives';
+import { Methodology } from './components/sections/Methodology';
+import { Technologies } from './components/sections/Technologies';
 import { Milestones } from './components/sections/Milestones';
 import { Documents } from './components/sections/Documents';
 import { Slides } from './components/sections/Slides';
 import { AboutUs } from './components/sections/AboutUs';
 import { Contact } from './components/sections/Contact';
+
 export function App() {
   const [activeSection, setActiveSection] = useState('home');
+
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'domain', 'milestones', 'documents', 'slides', 'about', 'contact'];
+      const sections = [
+        'home',
+        'scope',
+        'research',
+        'objectives',
+        'methodology',
+        'technologies',
+        'milestones',
+        'documents',
+        'slides',
+        'about',
+        'contact'
+      ];
       const scrollPosition = window.scrollY + 100;
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -30,11 +48,16 @@ export function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return <div className="w-full min-h-screen bg-gray-50">
       <Navbar activeSection={activeSection} />
       <main className="w-full">
         <Home />
-        <Domain />
+        <ProjectScope />
+        <ResearchProblem />
+        <Objectives />
+        <Methodology />
+        <Technologies />
         <Milestones />
         <Documents />
         <Slides />

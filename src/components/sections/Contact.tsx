@@ -32,7 +32,7 @@ export function Contact() {
       } else {
         // Try to get a more specific error message from Formspree
         response.json().then((data) => {
-          if (Object.hasOwn(data, 'errors')) {
+          if ('errors' in data) {
             alert(
               `Oops! There was a problem: ${data.errors.map((error: any) => error.message).join(', ')}`,
             )

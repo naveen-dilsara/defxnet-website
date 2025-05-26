@@ -77,20 +77,18 @@ export function Documents() {
                 <div>Modified: {doc.lastModified}</div>
               </div>
               <div className="flex gap-2">
-                {/* MODIFIED: Download button is now an <a> tag */}
                 <a
-                  href={`/documents/${doc.filename}`} // Path to the document
-                  download // This attribute triggers download
+                  href={`/documents/${doc.filename}`}
+                  download
                   className="flex items-center gap-1 px-3 py-2 bg-blue-900 text-white text-sm rounded hover:bg-blue-800 transition-all duration-200 transform hover:scale-105"
                 >
                   <DownloadIcon className="h-4 w-4" />
                   Download
                 </a>
-                {/* MODIFIED: View button is now an <a> tag */}
                 <a
-                  href={`/documents/${doc.filename}`} // Path to the document
-                  target="_blank" // Opens in a new tab/window
-                  rel="noopener noreferrer" // Security best practice for target="_blank"
+                  href={`/documents/${doc.filename}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-1 px-3 py-2 border border-gray-300 text-gray-700 text-sm rounded hover:bg-gray-50 transition-colors"
                 >
                   <ExternalLinkIcon className="h-4 w-4" />
