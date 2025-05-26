@@ -140,7 +140,7 @@ export function Home() {
                            transition-all duration-500">
                 <FlaskConical className="w-10 h-10 text-blue-300 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Research Impact</h3>
-                <p className="text-blue-200/70">Advancing healthcare security through innovative solutions</p>
+                <p className="text-blue-200/70">Advancing healthcare security through innovative solutions.</p>
               </div>
             </div>
           </div>
