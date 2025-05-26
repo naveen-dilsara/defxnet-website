@@ -67,7 +67,7 @@ export function Home() {
                 DefXNet
         </h1>
               <p className="text-2xl md:text-3xl text-blue-200/90 font-light">
-                Securing Medical ML Systems Through Advanced Defense Mechanisms
+                Securing Medical DL Systems Through Advanced Defense Mechanisms
               </p>
             </div>
 
