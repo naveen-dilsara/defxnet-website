@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './animations.css';
+
+/* Custom background patterns and gradients */
+.bg-gradient-mesh {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%),
+    radial-gradient(at 50% 0%, rgb(30, 58, 138, 0.1) 0%, transparent 75%),
+    radial-gradient(at 100% 0%, rgb(30, 58, 138, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgb(30, 58, 138, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-gradient-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    rgba(30, 58, 138, 0.03) 0%,
+    rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+/* Glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Soft shadow */
+.shadow-soft {
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.05);
+}
+
+/* Section transitions */
+.section-transition {
+  position: relative;
+}
+
+.section-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%);
+  pointer-events: none;
+} 

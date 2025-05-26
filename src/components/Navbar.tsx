@@ -44,9 +44,12 @@ export function Navbar({ activeSection }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            {/* Optional: Add a logo or link to home here */}
-            <button onClick={() => scrollToSection('home')} className="text-xl font-bold text-blue-900 hover:text-blue-800 transition-colors">
-              CNN Robustness Research
+            <button onClick={() => scrollToSection('home')} className="flex items-center hover:opacity-80 transition-opacity">
+              <img 
+                src="/images/Logo DefXNet.jpg" 
+                alt="DefXNet Logo" 
+                className="h-12 w-auto object-contain"
+              />
             </button>
           </div>
 

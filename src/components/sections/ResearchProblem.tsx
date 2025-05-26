@@ -8,7 +8,7 @@ export function ResearchProblem() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            ⚠️ Research Problem & Solution
+            Research Problem & Solution
           </h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
@@ -20,10 +20,11 @@ export function ResearchProblem() {
                 Problem Statement
               </h3>
             </div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              CNNs in medical imaging are vulnerable to adversarial attacks,
-              which can cause dangerous misclassifications, threatening patient
-              safety and undermining trust in AI-driven healthcare diagnostics.
+            <p className="text-lg text-gray-700 leading-relaxed text-justify mb-4">
+              Medical imaging systems using CNN models which are powerful but highly vulnerable to adversarial attacks to images that can cause wrong predictions. This is dangerous in chest X-ray diagnosis, where errors can affect patient safety.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              There is a lack of proper testing on how different attacks like STM, PGN, SIA, and USMM affect these models, and current defense methods are not well evaluated in the medical field. This research aims to identify these weaknesses and develop strong defenses to make AI-based diagnostics safer and more reliable.
             </p>
             <div className="mt-6 p-4 bg-red-50 rounded-lg">
               <p className="text-red-800 font-medium">

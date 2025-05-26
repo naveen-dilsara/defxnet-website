@@ -1,17 +1,16 @@
 import React from 'react'
 import {
-  CodeIcon,
-  BrainIcon,
-  BarChartIcon,
-  MonitorIcon,
-  DatabaseIcon,
+  BrainCircuit,
+  Code2,
+  BarChart3,
+  MonitorDot,
+  Database,
 } from 'lucide-react'
 
 interface TechItem {
   name: string;
-  imgSrc?: string;
-  fallbackClass?: string;
-  customIcon?: string;
+  logo: string;
+  description?: string;
 }
 
 interface Category {
@@ -23,116 +22,112 @@ interface Category {
 export function Technologies() {
   const categories: Category[] = [
     {
-      title: 'DL Frameworks',
-      icon: BrainIcon,
+      title: 'DL Frameworks & Models',
+      icon: BrainCircuit,
       items: [
         { 
           name: 'TensorFlow',
-          imgSrc: '/images/tech/tensorflow.png',
-          fallbackClass: 'devicon-tensorflow-original colored'
-        }
-      ],
-    },
-    {
-      title: 'Model Architectures',
-      icon: BrainIcon,
-      items: [
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg',
+          description: 'Deep Learning Framework'
+        },
         { 
           name: 'ResNet50',
-          customIcon: '🧠',
+          logo: 'https://neurohive.io/wp-content/uploads/2019/01/resnet-e1548261477164.png',
+          description: 'Residual Neural Network'
         },
         { 
           name: 'DenseNet121',
-          customIcon: '🔄',
+          logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvdpFNYIZi7ot8PfIAmlM17z6_Yc5OcPyYUw&s',
+          description: 'Dense Convolutional Network'
         },
         { 
-          name: 'VGG19',
-          customIcon: '🎯',
+          name: 'VGG16',
+          logo: 'https://neurohive.io/wp-content/uploads/2018/11/vgg16.png',
+          description: 'Very Deep CNN'
         },
         { 
-          name: 'Inception V3',
-          customIcon: '🌐',
-        },
+          name: 'InceptionV3',
+          logo: 'https://production-media.paperswithcode.com/methods/inceptionv3onc--oview_vjAbOfw.png',
+          description: 'Very Deep CNN'
+        }
       ],
     },
     {
-      title: 'Programming Lang.',
-      icon: CodeIcon,
+      title: 'Core Technologies',
+      icon: Code2,
       items: [
         { 
           name: 'Python',
-          imgSrc: '/images/tech/python.png',
-          fallbackClass: 'devicon-python-plain colored'
-        }
-      ],
-    },
-    {
-      title: 'Data Management Tools',
-      icon: DatabaseIcon,
-      items: [
-        { 
-          name: 'Pandas',
-          imgSrc: '/images/tech/pandas.png',
-          fallbackClass: 'devicon-pandas-original colored'
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+          description: 'Primary Programming Language'
         },
         { 
           name: 'NumPy',
-          imgSrc: '/images/tech/numpy.png',
-          fallbackClass: 'devicon-numpy-original colored'
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg',
+          description: 'Numerical Computing'
+        },
+        { 
+          name: 'Pandas',
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg',
+          description: 'Data Analysis'
+        },
+        { 
+          name: 'Next Js',
+          logo: 'https://static-00.iconduck.com/assets.00/nextjs-icon-512x309-yynfidez.png',
+          description: 'Server-Side Rendering'
         }
       ],
     },
     {
-      title: 'Visualization Tools',
-      icon: BarChartIcon,
+      title: 'Analysis & Development',
+      icon: BarChart3,
       items: [
         { 
           name: 'Matplotlib',
-          imgSrc: '/images/tech/matplotlib.png',
-          fallbackClass: 'devicon-python-plain colored'
-        }
-      ],
-    },
-    {
-      title: 'Evaluation Metrics',
-      icon: BarChartIcon,
-      items: [
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg',
+          description: 'Visualization'
+        },
         { 
           name: 'Scikit-learn',
-          imgSrc: '/images/tech/sklearn.png',
-          fallbackClass: 'devicon-python-plain colored'
-        }
-      ],
-    },
-    {
-      title: 'IDE & Compute Resources',
-      icon: MonitorIcon,
-      items: [
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg',
+          description: 'Machine Learning'
+        },
         { 
           name: 'Google Colab',
-          imgSrc: '/images/tech/colab.png',
-          fallbackClass: 'devicon-google-plain colored'
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg',
+          description: 'Development Platform'
         }
       ],
-    },
+    }
   ]
 
   return (
-    <section id="technologies" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="technologies" className="py-20 relative overflow-hidden">
+      {/* Background with gradient and pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoNTksIDEzMCwgMjQ2LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Tools and Technologies
           </h2>
+          <p className="text-xl text-gray-600">
+            Cutting-edge technologies powering our research
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-8">
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+              className="backdrop-blur-lg bg-white/40 border border-white/60 rounded-xl p-6
+                       shadow-[0_8px_16px_rgba(148,163,184,0.1)]
+                       hover:shadow-[0_8px_24px_rgba(148,163,184,0.2)]
+                       hover:bg-white/50
+                       transition-all duration-300"
             >
-              <div className="flex items-center mb-6">
+              <div className="flex items-center mb-8">
                 <div className="bg-blue-900 p-3 rounded-lg">
                   <category.icon className="h-6 w-6 text-white" />
                 </div>
@@ -141,31 +136,35 @@ export function Technologies() {
                 </h3>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {category.items.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="flex items-center p-4 bg-white rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                    className="flex flex-col items-center justify-between p-6 bg-white rounded-xl
+                             hover:shadow-lg transition-all duration-300 
+                             hover:-translate-y-1 group h-full"
                   >
-                    {item.imgSrc ? (
+                    <div className="flex-1 flex items-center justify-center w-full p-4">
                       <img
-                        src={item.imgSrc}
+                        src={item.logo}
                         alt={item.name}
-                        className="w-12 h-12 object-contain mr-4"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.onerror = null;
-                          const fallbackIcon = document.createElement('i');
-                          fallbackIcon.className = `${item.fallbackClass} text-3xl`;
-                          target.parentNode?.replaceChild(fallbackIcon, target);
-                        }}
+                        className="max-w-[120px] max-h-[120px] w-auto h-auto object-contain
+                                 filter group-hover:brightness-110 transition-all
+                                 drop-shadow-md"
                       />
-                    ) : (
-                      <span className="text-3xl mr-4">{item.customIcon}</span>
-                    )}
-                    <span className="text-gray-800 font-medium">
-                      {item.name}
-                    </span>
+                    </div>
+                    <div className="text-center mt-4">
+                      <h4 className="text-sm font-bold text-gray-900 group-hover:text-blue-900 
+                                   transition-colors">
+                        {item.name}
+                      </h4>
+                      {item.description && (
+                        <p className="text-xs text-gray-500 group-hover:text-gray-700 
+                                    transition-colors mt-1">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -173,6 +172,10 @@ export function Technologies() {
           ))}
         </div>
       </div>
+
+      {/* Decorative blurred circles */}
+      <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 rounded-full opacity-20 blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-200 rounded-full opacity-20 blur-3xl"></div>
     </section>
   )
 } 

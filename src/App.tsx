@@ -49,28 +49,53 @@ export function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return <div className="w-full min-h-screen bg-gray-50">
+  return (
+    <div className="w-full min-h-screen bg-gradient-mesh">
       <Navbar activeSection={activeSection} />
       <main className="w-full">
-        <Home />
-        <ProjectScope />
-        <ResearchProblem />
-        <Objectives />
-        <Methodology />
-        <Technologies />
-        <Milestones />
-        <Documents />
-        <Slides />
-        <AboutUs />
-        <Contact />
+        <div className="bg-dot-pattern">
+          <Home />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <ProjectScope />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <ResearchProblem />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <Objectives />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <Methodology />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <Technologies />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <Milestones />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <Documents />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <Slides />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <AboutUs />
+        </div>
+        <div className="bg-gradient-section section-transition">
+          <Contact />
+        </div>
       </main>
-      <footer className="bg-blue-900 text-white py-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <footer className="bg-blue-900 text-white py-8 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <p className="text-sm">
             © 2025 DefXNet Solutions Team. All rights reserved. |
             SLIIT
           </p>
         </div>
+        <div className="absolute inset-0 bg-dot-pattern opacity-10"></div>
       </footer>
-    </div>;
+    </div>
+  )
 }

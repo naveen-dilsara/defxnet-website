@@ -1,99 +1,193 @@
 import React from 'react';
-import { MailIcon, AwardIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
-export function AboutUs() {
-  const teamMembers = [{
-    name: 'N. Premakanthan',
-    role: 'Researcher – STM Attack',
-    email: 'it21197550@my.sliit.lk',
-    photo: '/images/n_premakanthan.jpg',
-    achievements: ['Style Transfer Adversarial Research', 'Medical Imaging Security Analysis', 'CNN Vulnerability Assessment'],
-    social: {
-      github: 'npremakanthan',
-      linkedin: 'n-premakanthan'
-    }
-  }, {
-    name: 'D.S.C. Wijesuriya',
-    role: 'Researcher – PGN Attack',
-    email: 'it21155802@my.sliit.lk',
-    photo: '/images/dsc_wijesuriya.jpg',
-    achievements: ['Gradient Norm Attack Studies', 'Adversarial Defense Mechanisms', 'ResNet Robustness Evaluation'],
-    social: {
-      github: 'stephan-rz',
-      linkedin: 'stephanrz'
-    }
-  }, {
-    name: 'P.G.E.J. Sandamal',
-    role: 'Researcher – SIA Attack',
-    email: 'it21166860@my.sliit.lk',
-    photo: '/images/pgej_sandamal.jpg',
-    achievements: ['Block-Wise Transformation Analysis', 'Medical Image Processing', 'CNN Security Framework Development'],
-    social: {
-      github: 'Janith-Sandamal',
-      linkedin: 'janith-sandamal-25112218b'
+import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 
+interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+  description: string;
+  links: {
+    github?: string;
+    linkedin?: string;
+    email?: string;
+    website?: string;
+  };
+}
+
+export function AboutUs() {
+  const teamMembers: TeamMember[] = [
+    {
+      name: "Dr. Harinda Fernando",
+      role: "Research Supervisor",
+      image: "/images/harindaf-1710311664.jpg",
+      description: "Assistant Professor, Faculty of Computing, Sri Lanka Institute of Information Technology",
+      links: {
+        email: "harinda.f@sliit.lk",
+        linkedin: "https://www.linkedin.com/in/harinda-fernando-7655bb67/"
+      }
+    },
+    {
+      name: "Mr. Kavinga Abeywardena",
+      role: "Co-Supervisor",
+      image: "/images/kavingay-1697037288.jpg",
+      description: "Senior Lecturer, Faculty of Computing, Sri Lanka Institute of Information Technology",
+      links: {
+        email: "kavinga.y@sliit.lk",
+        linkedin: "https://www.linkedin.com/in/kavinga-yapa-abeywardena-a1386361"
+      }
+    },
+    {
+      name: "N. Premakanthan",
+      role: "Researcher",
+      image: "/images/n_premakanthan.jpg",
+      description: "it21197550@my.sliit.lk",
+      links: {
+        github: "https://github.com/premakanthan",
+        linkedin: "https://www.linkedin.com/in/premakanthan",
+        email: "it21197550@my.sliit.lk"
+      }
+    },
+    {
+      name: "D.S.C. Wijesuriya",
+      role: "Researcher",
+      image: "/images/dsc_wijesuriya.jpg",
+      description: "it21155802@my.sliit.lk",
+      links: {
+        github: "https://github.com/wijesuriya",
+        linkedin: "https://www.linkedin.com/in/wijesuriya",
+        email: "it21155802@my.sliit.lk"
+      }
+    },
+    {
+      name: "P.G.E.J. Sandamal",
+      role: "Researcher",
+      image: "/images/pgej_sandamal.jpg",
+      description: "it21166860@my.sliit.lk",
+      links: {
+        github: "https://github.com/sandamal",
+        linkedin: "https://www.linkedin.com/in/sandamal",
+        email: "it21166860@my.sliit.lk"
+      }
+    },
+    {
+      name: "W.N. Dilsara",
+      role: "Researcher",
+      image: "/images/wn_dilsara.jpg",
+      description: "it21182600@my.sliit.lk",
+      links: {
+        github: "https://github.com/dilsara",
+        linkedin: "https://www.linkedin.com/in/dilsara",
+        email: "it21182600@my.sliit.lk"
+      }
     }
-  }, {
-    name: 'W.N. Dilsara',
-    role: 'Researcher – USMM Attack',
-    email: 'it21182600@my.sliit.lk',
-    photo: '/images/wn_dilsara.jpg',
-    achievements: ['Novel Mask-Based Adversarial Strategy', 'Transfer Learning Applications', 'Medical Dataset Analysis'],
-    social: {
-      github: 'naveen-dilsara',
-      linkedin: 'naveendilsara'
-    }
-  }];
-  return <section id="about" className="w-full py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  ];
+
+  return (
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Background with gradient and pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoNTksIDEzMCwgMjQ2LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            About Our Research Team
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet the dedicated researchers specializing in adversarial attacks
-            and CNN robustness in medical imaging systems
-          </p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Research Team</h2>
+          <p className="text-xl text-gray-600">Dedicated researchers working on advancing medical AI security</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {teamMembers.map((member, index) => <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-transparent hover:border-blue-100">
-              <div className="flex items-start gap-6">
-                <img src={member.photo} alt={member.name} className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-4 border-blue-900" />
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
+
+        {/* Supervisors - Larger cards */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {teamMembers.slice(0, 2).map((member, index) => (
+            <div 
+              key={index}
+              className="backdrop-blur-lg bg-white/40 border border-white/60 rounded-2xl p-8
+                         shadow-[0_8px_16px_rgba(148,163,184,0.1)]
+                         hover:shadow-[0_8px_24px_rgba(148,163,184,0.2)]
+                         hover:bg-white/50
+                         transition-all duration-300
+                         group"
+            >
+              <div className="flex flex-col md:flex-row gap-6 items-center">
+                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white/80 shadow-lg">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors">
                     {member.name}
                   </h3>
-                  <p className="text-blue-900 font-medium mb-3">
-                    {member.role}
-                  </p>
-                  <div className="flex items-center gap-2 text-gray-600 mb-4">
-                    <MailIcon className="h-4 w-4" />
-                    <a href={`mailto:${member.email}`} className="text-sm hover:text-blue-900 transition-colors">
-                      {member.email}
-                    </a>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-1">
-                      <AwardIcon className="h-4 w-4" />
-                      Research Focus
-                    </h4>
-                    <ul className="space-y-1">
-                      {member.achievements.map((achievement, idx) => <li key={idx} className="text-sm text-gray-600">
-                          • {achievement}
-                        </li>)}
-                    </ul>
-                  </div>
-                  <div className="flex gap-3">
-                    <a href={`https://github.com/${member.social.github}`} className="text-gray-400 hover:text-gray-600 transition-colors" target="_blank" rel="noopener noreferrer">
-                      <GithubIcon className="h-5 w-5" />
-                    </a>
-                    <a href={`https://linkedin.com/in/${member.social.linkedin}`} className="text-gray-400 hover:text-blue-900 transition-colors" target="_blank" rel="noopener noreferrer">
-                      <LinkedinIcon className="h-5 w-5" />
-                    </a>
+                  <p className="text-blue-900 font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-600 mb-4">{member.description}</p>
+                  <div className="flex gap-4 justify-center md:justify-start">
+                    {member.links.linkedin && (
+                      <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer"
+                         className="text-gray-600 hover:text-blue-600 transition-colors">
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                    )}
+                    {member.links.email && (
+                      <a href={`mailto:${member.links.email}`}
+                         className="text-gray-600 hover:text-blue-600 transition-colors">
+                        <Mail className="w-5 h-5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
+        </div>
+
+        {/* Team Members - Smaller cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamMembers.slice(2).map((member, index) => (
+            <div 
+              key={index}
+              className="backdrop-blur-lg bg-white/40 border border-white/60 rounded-xl p-6
+                         shadow-[0_8px_16px_rgba(148,163,184,0.1)]
+                         hover:shadow-[0_8px_24px_rgba(148,163,184,0.2)]
+                         hover:bg-white/50
+                         transition-all duration-300
+                         group"
+            >
+              <div className="text-center">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white/80 shadow-lg mb-4">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors">
+                  {member.name}
+                </h3>
+                <p className="text-blue-900 font-medium mb-3">{member.role}</p>
+                <p className="text-gray-600 mb-4 text-sm">{member.description}</p>
+                <div className="flex gap-4 justify-center">
+                  {member.links.github && (
+                    <a href={member.links.github} target="_blank" rel="noopener noreferrer"
+                       className="text-gray-600 hover:text-blue-600 transition-colors">
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
+                  {member.links.linkedin && (
+                    <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer"
+                       className="text-gray-600 hover:text-blue-600 transition-colors">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+
+      {/* Decorative blurred circles */}
+      <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 rounded-full opacity-20 blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-300 rounded-full opacity-20 blur-3xl"></div>
+    </section>
+  );
 }
