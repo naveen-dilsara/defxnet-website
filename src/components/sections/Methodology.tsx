@@ -42,7 +42,7 @@ export function Methodology() {
         "• Uniform Scale Mix Mask (USMM)",
         "• Structure Invariant Attack (SIA)",
         "• Penalizing Gradient Norm (PGN)",
-        "Applied each attack on the fine-tuned ResNet model to evaluate its vulnerability"
+        "Applied each attack on the fine-tuned CNN model to evaluate its vulnerability"
       ]
     },
     {
